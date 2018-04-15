@@ -8,6 +8,22 @@ body {
   overflow-x: hidden;
 }
 
+#brainContainer {
+  margin: auto;
+    width: 50%;
+    height: 100vh;
+    z-index: -1;
+    opacity:.1;
+    animation-name: fadeIn;
+    animation-duration: 4s;
+
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: .1;}
+}
+
 /* ---------- Fog ---------- */
 .fogwrapper {
   height: 100%;
@@ -16,6 +32,7 @@ body {
   width: 100%;
   -webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
   filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+  z-index: 10;
 }
 #foglayer_01, #foglayer_02, #foglayer_03 {
   height: 100%;
